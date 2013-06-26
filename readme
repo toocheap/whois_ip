@@ -1,0 +1,44 @@
+# whois_ip
+
+# Abstract
+
+whois_ip.py is a script which resolve network information from ip addresses by whois database.
+
+## usage
+
+$ cat ips.txt
+17.154.66.17
+180.37.182.167
+202.219.52.70
+23.11.146.217
+23.11.147.205
+74.125.235.100
+$ cat ips.txt | python whois_ip.py
+202.219.52.70   202.219.0.0     255.255.0.0     FUJITSU.COM     INFOWEB
+74.125.235.100  74.125.235.0    255.255.255.0   GOOGLE.COM      GOOGLE
+180.37.182.167  180.0.0.0       255.192.0.0     OCN.NE.JP       OCN
+17.154.66.17    17.154.0.0      255.255.0.0     APPLE.COM       APPLE
+23.11.146.217   23.11.144.0     255.255.240.0   AKAMAI.COM      ODN
+23.11.147.205   23.11.144.0     255.255.240.0   AKAMAI.COM      ODN
+
+## how to install
+
+whois_ip.py uses python and bulkWhois module. You can install them by following:
+
+$ python -V
+>>> Python 2.7.4
+curl -O http://python-distribute.org/distribute_setup.py
+python distribute_setup.py
+easy_install --help
+>>> ...
+easy_install pip
+pip --help
+>>> …
+pip install bulkWhois
+
+## Tested environment
+
+MacOS X 10.8
+Python 2.7.4
+BulkWhois 0.2.1
+
